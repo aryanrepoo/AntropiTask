@@ -1,0 +1,21 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Runtime incident logs (preserve sample)
+incidents/incident_log.jsonl
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+
+# OS and Editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
