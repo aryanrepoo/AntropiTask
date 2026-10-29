@@ -12,13 +12,12 @@ An end-to-end autonomous mobile robot (AMR) simulation tailored to **Antropi Rob
 
 ## 📹 Video Demo
 
-> **[▶ Watch the 90-Second Demo](https://youtube.com/watch?v=REPLACE_WITH_YOUR_LINK)**
+> **[▶ Watch the Demonstration Recording (`media/demo_recording.mp4`)](media/demo_recording.mp4)**
 
-The demo shows:
-1. **Automated AMCL localization** — no manual RViz2 clicks.
-2. **4-station CNC production loop** — `Raw Material Dock` → `CNC Mill 01` → `CNC Lathe 02` → `CMM Inspection` → `Dock`.
-3. **Live Telemetry HUD** — real-time minimum LiDAR distance, Time-to-Collision (TTC), and safety tier classification.
-4. **Dynamic obstacle stress test** — a box dropped mid-transit triggers a `[PROXIMITY BREACH]` alert on the HUD and automatically writes a structured JSON incident report with the robot's exact coordinates.
+The screen recording demonstrates:
+1. **Autonomous Navigation in Gazebo & RViz2** — side-by-side execution in Ubuntu displaying both the 3D physics simulator and sensor visualization.
+2. **Nav2 Path Planning & Obstacle Avoidance** — real-time global planner path computation and local costmap inflation around cylindrical pillars.
+3. **AMCL Localization & Laser Scanning** — live 360° LiDAR raycasting matching map features and particle cloud convergence.
 
 ---
 
