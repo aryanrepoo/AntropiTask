@@ -12,7 +12,10 @@ An end-to-end autonomous mobile robot (AMR) simulation tailored to **Antropi Rob
 
 ## 📹 Video Demo
 
-> **[▶ Watch the Demonstration Recording (`media/demo_recording.mp4`)](media/demo_recording.mp4)**
+![TurtleBot3 Autonomous Navigation in Gazebo & RViz2](media/demo_preview.gif)
+
+* **[▶ Stream Full HD Video (`demo_recording.mp4`)](https://github.com/boozards/AntropiTask/raw/main/media/demo_recording.mp4)**
+* **[📦 Download from Release v1.0.0](https://github.com/boozards/AntropiTask/releases/tag/v1.0.0)**
 
 The screen recording demonstrates:
 1. **Autonomous Navigation in Gazebo & RViz2** — side-by-side execution in Ubuntu displaying both the 3D physics simulator and sensor visualization.
