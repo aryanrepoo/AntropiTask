@@ -1,0 +1,49 @@
+services:
+  antropi_sim:
+    build: .
+    container_name: antropi_amr_sim
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - TURTLEBOT3_MODEL=waffle
+      - LIBGL_ALWAYS_SOFTWARE=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    # Launch Gazebo + Nav2 + RViz2 together
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               ros2 launch antropi_amr_sim factory_sim_bringup.launch.py"
+
+  # Run the autonomous factory dispatcher in a second container
+  # Usage: docker compose run dispatcher
+  dispatcher:
+    build: .
+    container_name: antropi_dispatcher
+    network_mode: host
+    environment:
+      - TURTLEBOT3_MODEL=waffle
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               ros2 run antropi_amr_sim factory_dispatcher"
+    depends_on:
+      - antropi_sim
+
+  # Run the live telemetry HUD & incident logger in a third container
+  # Usage: docker compose run telemetry_hud
+  telemetry_hud:
+    build: .
+    container_name: antropi_telemetry_hud
+    network_mode: host
+    environment:
+      - TURTLEBOT3_MODEL=waffle
+    volumes:
+      - ./incidents:/root/antropi_ws/incidents:rw
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               source /ros2_ws/install/setup.bash &&
+               ros2 run antropi_amr_sim factory_telemetry_hud"
+    depends_on:
+      - antropi_sim
