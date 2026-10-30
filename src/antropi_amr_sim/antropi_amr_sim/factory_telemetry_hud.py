@@ -71,10 +71,10 @@ SHOW_CURSOR = "\033[?25h"
 # Factory Zone Classification (based on proximity to known station coords)
 # =============================================================================
 FACTORY_ZONES = [
-    {"name": "Raw_Material_Dock",    "x": -2.0, "y": -0.5},
-    {"name": "CNC_Mill_Cell_01",     "x":  0.5, "y":  1.8},
-    {"name": "CNC_Lathe_Cell_02",    "x":  1.8, "y": -0.5},
-    {"name": "CMM_Quality_Control",  "x":  0.4, "y": -1.8},
+    {"name": "Raw_Material_Dock",    "x": -1.8, "y": -0.5},
+    {"name": "CNC_Mill_Cell_01",     "x":  0.5, "y":  1.2},
+    {"name": "CNC_Lathe_Cell_02",    "x":  1.2, "y": -0.5},
+    {"name": "CMM_Quality_Control",  "x":  0.4, "y": -1.2},
 ]
 
 

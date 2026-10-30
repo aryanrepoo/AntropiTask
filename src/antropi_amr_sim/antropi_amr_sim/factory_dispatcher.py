@@ -17,10 +17,10 @@ from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
 # CNC Shop-Floor Station Definitions (turtlebot3_world collision-free coords)
 # ---------------------------------------------------------------------------
 FACTORY_STATIONS = [
-    {"name": "CNC_Mill_Cell_01",    "x":  0.5, "y":  1.8, "yaw":   0.0, "dwell_sec": 3.0},
-    {"name": "CNC_Lathe_Cell_02",   "x":  1.8, "y": -0.5, "yaw": -90.0, "dwell_sec": 3.0},
-    {"name": "CMM_Quality_Control", "x":  0.4, "y": -1.8, "yaw": 180.0, "dwell_sec": 3.0},
-    {"name": "Raw_Material_Dock",   "x": -2.0, "y": -0.5, "yaw":   0.0, "dwell_sec": 2.0},
+    {"name": "CNC_Mill_Cell_01",    "x":  0.5, "y":  1.2, "yaw":   0.0, "dwell_sec": 3.0},
+    {"name": "CNC_Lathe_Cell_02",   "x":  1.2, "y": -0.5, "yaw": -90.0, "dwell_sec": 3.0},
+    {"name": "CMM_Quality_Control", "x":  0.4, "y": -1.2, "yaw": 180.0, "dwell_sec": 3.0},
+    {"name": "Raw_Material_Dock",   "x": -1.8, "y": -0.5, "yaw":   0.0, "dwell_sec": 2.0},
 ]
 
 INITIAL_POSE = {"x": -2.0, "y": -0.5, "yaw_deg": 0.0}
