@@ -172,7 +172,7 @@ source ~/.bashrc
 
 ```bash
 mkdir -p ~/antropi_ws/src && cd ~/antropi_ws/src
-git clone https://github.com/boozards/AntropiTask.git
+git clone https://github.com/aryanrepoo/AntropiTask.git
 
 cd ~/antropi_ws
 colcon build --symlink-install
@@ -218,7 +218,7 @@ Press **Ctrl+C** to exit — prints a summary of incidents logged.
 > **Note:** Docker GUI forwarding requires a Linux host with X11. On macOS, use the native UTM approach above.
 
 ```bash
-git clone https://github.com/boozards/AntropiTask.git
+git clone https://github.com/aryanrepoo/AntropiTask.git
 cd antropi_amr_sim
 
 xhost +local:root
