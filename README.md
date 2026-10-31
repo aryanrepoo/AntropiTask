@@ -219,7 +219,7 @@ Press **Ctrl+C** to exit — prints a summary of incidents logged.
 
 ```bash
 git clone https://github.com/aryanrepoo/AntropiTask.git
-cd antropi_amr_sim
+cd AntropiTask
 
 xhost +local:root
 
@@ -227,10 +227,10 @@ xhost +local:root
 docker compose up --build antropi_sim
 
 # Terminal 2: Run the factory dispatcher
-docker compose run dispatcher
+docker compose run --rm dispatcher
 
 # Terminal 3: Run the telemetry HUD
-docker compose run telemetry_hud
+docker compose run --rm telemetry_hud
 ```
 
 ---
@@ -256,7 +256,7 @@ All nodes standardize on `base_footprint` (REP-105). TF chain: `map` → `odom` 
 ## 📁 Repository Structure
 
 ```text
-antropi_amr_sim/
+AntropiTask/
 ├── Dockerfile                      # ROS 2 Jazzy container definition
 ├── docker-compose.yml              # Three services: sim, dispatcher, telemetry_hud
 ├── README.md                       # This file

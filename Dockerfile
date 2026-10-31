@@ -1,10 +1,11 @@
-FROM osrf/ros:jazzy-desktop-full
+FROM ros:jazzy
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TURTLEBOT3_MODEL=waffle
 ENV ROS_DOMAIN_ID=0
 
 RUN apt-get update && apt-get install -y \
+    ros-jazzy-desktop \
     ros-jazzy-ros-gz \
     ros-jazzy-navigation2 \
     ros-jazzy-nav2-bringup \

@@ -3,6 +3,7 @@ services:
     build: .
     container_name: antropi_amr_sim
     network_mode: host
+    ipc: host
     environment:
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
@@ -17,11 +18,11 @@ services:
                ros2 launch antropi_amr_sim factory_sim_bringup.launch.py"
 
   # Run the autonomous factory dispatcher in a second container
-  # Usage: docker compose run dispatcher
+  # Usage: docker compose run --rm dispatcher
   dispatcher:
     build: .
-    container_name: antropi_dispatcher
     network_mode: host
+    ipc: host
     environment:
       - TURTLEBOT3_MODEL=waffle
     command: >
@@ -32,11 +33,11 @@ services:
       - antropi_sim
 
   # Run the live telemetry HUD & incident logger in a third container
-  # Usage: docker compose run telemetry_hud
+  # Usage: docker compose run --rm telemetry_hud
   telemetry_hud:
     build: .
-    container_name: antropi_telemetry_hud
     network_mode: host
+    ipc: host
     environment:
       - TURTLEBOT3_MODEL=waffle
     volumes:
